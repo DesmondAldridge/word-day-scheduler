@@ -42,17 +42,19 @@ function colorCoordinator(timeID) {
     }
 
 // Color Coordination
-$(document).ready(
-    colorCoordinator(nineAM), 
-    colorCoordinator(tenAM), 
-    colorCoordinator(elevenAM), 
-    colorCoordinator(twelvePM), 
-    colorCoordinator(onePM), 
-    colorCoordinator(twoPM),
-    colorCoordinator(threePM), 
-    colorCoordinator(fourPM),
-    colorCoordinator(fivePM),
-    )
+
+    colorCoordinator(nineAM);
+    colorCoordinator(tenAM);
+    colorCoordinator(elevenAM); 
+    colorCoordinator(twelvePM); 
+    colorCoordinator(onePM);
+    colorCoordinator(twoPM);
+    colorCoordinator(threePM); 
+    colorCoordinator(fourPM);
+    colorCoordinator(fivePM);
+
+
+
 
 
 
