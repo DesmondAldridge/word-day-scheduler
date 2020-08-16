@@ -1,35 +1,64 @@
-
+// DISPLAYING CURRENT DATE
 $('#currentDay').append(moment().format('MMM Do YYYY'));
 
+// The current hour
 var currentHour = moment().format('h');
-// console.log(currentTime);
 
-// So the hours know which hours they are
-// var nineAM = $('#9AM');
-
-var nineAm = moment().set('h', 6);
-
-    console.log(nineAm);
-
-    console.log(nineAm == currentHour);
-
-    console.log(currentHour);
-
+// Work hours
+var nineAM = moment('9:00 am', 'hh:mm a').format('h');
+var tenAM = moment('10:00 am', 'hh:mm a').format('h');
+var elevenAM = moment('11:00 am', 'hh:mm a').format('h');
+var twelvePM = moment('12:00 pm', 'hh:mm a').format('h');
+var onePM = moment('1:00 pm', 'hh:mm a').format('h');
+var twoPM = moment('2:00 pm', 'hh:mm a').format('h');
+var threePM = moment('3:00 pm', 'hh:mm a').format('h');
+var fourPM = moment('4:00 pm', 'hh:mm a').format('h');
+var fivePM = moment('5:00 pm', 'hh:mm a').format('h');
 
 
+// Work hour IDs... to identify which hours each time block represents
+$('#9am') == nineAM;
+$('#10am') == tenAM;
+$('#11am') == elevenAM;
+$('#12pm') == twelvePM;
+$('#1pm') == onePM;
+$('#2pm') == twoPM;
+$('#3pm') == threePM;
+$('#4pm') == fourPM;
+$('#5pm') == fivePM;
+
+// Color Coordinator
+function colorCoordinator(timeID) {
+    
+        if (timeID < currentHour) 
+        {$('time-block').css('past');}
+
+        else if (timeID == currentHour)
+        {$('time-block').css('present');}
+
+        else if (timeID > currentHour)
+        {$('time-block').css('future')};
+
+    }
+
+// Color Coordination
+$(document).ready(
+    colorCoordinator(nineAM), 
+    colorCoordinator(tenAM), 
+    colorCoordinator(elevenAM), 
+    colorCoordinator(twelvePM), 
+    colorCoordinator(onePM), 
+    colorCoordinator(twoPM),
+    colorCoordinator(threePM), 
+    colorCoordinator(fourPM),
+    colorCoordinator(fivePM),
+    )
 
 
 
 
 
 
-
-
-
-// var currentDate = moment().format('MMM Do YYYY');
-// var currentDayE1 = $('#currentDay');
-
-// currentDayE1.text(currentDate);
 
 
 
