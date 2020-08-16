@@ -17,41 +17,41 @@ var fivePM = moment('5:00 pm', 'hh:mm a').format('h');
 
 
 // Work hour IDs... to identify which hours each time block represents
-$('#9am') == nineAM;
-$('#10am') == tenAM;
-$('#11am') == elevenAM;
-$('#12pm') == twelvePM;
-$('#1pm') == onePM;
-$('#2pm') == twoPM;
-$('#3pm') == threePM;
-$('#4pm') == fourPM;
-$('#5pm') == fivePM;
+$('#9am').value = nineAM;
+// $('#10am') = tenAM;
+// $('#11am') = elevenAM;
+// $('#12pm') = twelvePM;
+// $('#1pm') = onePM;
+// $('#2pm') = twoPM;
+// $('#3pm') = threePM;
+// $('#4pm') = fourPM;
+// $('#5pm') = fivePM;
 
 // Color Coordinator
-function colorCoordinator(timeID) {
+function colorCoordinator(time) {
     
-        if (timeID < currentHour) 
-        {$('time-block').css('past');}
+        if (time < currentHour) 
+        {$('this').addClass('past');}
 
-        else if (timeID == currentHour)
-        {$('time-block').css('present');}
+        // else if (timeID == currentHour)
+        // {$('.time-block').replaceWith('.present');}
 
-        else if (timeID > currentHour)
-        {$('time-block').css('future')};
+        // else if (timeID > currentHour)
+        // {$('.time-block').replaceWith('.future')};
 
     }
 
 // Color Coordination
 
     colorCoordinator(nineAM);
-    colorCoordinator(tenAM);
-    colorCoordinator(elevenAM); 
-    colorCoordinator(twelvePM); 
-    colorCoordinator(onePM);
-    colorCoordinator(twoPM);
-    colorCoordinator(threePM); 
-    colorCoordinator(fourPM);
-    colorCoordinator(fivePM);
+    // colorCoordinator(tenAM);
+    // colorCoordinator(elevenAM); 
+    // colorCoordinator(twelvePM); 
+    // colorCoordinator(onePM);
+    // colorCoordinator(twoPM);
+    // colorCoordinator(threePM); 
+    // colorCoordinator(fourPM);
+    // colorCoordinator(fivePM);
 
 
 
