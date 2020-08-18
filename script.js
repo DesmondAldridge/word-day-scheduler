@@ -15,7 +15,23 @@ var threePM = moment('3:00 pm', 'hh:mm a').format('h');
 var fourPM = moment('4:00 pm', 'hh:mm a').format('h');
 var fivePM = moment('5:00 pm', 'hh:mm a').format('h');
 
-$('#9am').value = moment('9:00 am', 'hh:mm a').format('h');
+var $9am = $('#9am');
+var $10am = $('#10am');
+var $11am = $('#11am');
+var $12pm = $('#12pm');
+var $1pm = $('#1pm');
+var $2pm = $('#2pm');
+var $3pm = $('#3pm');
+var $4pm = $('#4pm');
+var $5pm = $('#5pm');
+
+$9am.value = moment('9:00 am', 'hh:mm a').format('h');
+
+console.log($9am);
+console.log($9am == currentHour);
+
+
+
 
 
 // Work hour IDs... to identify which hours each time block represents
@@ -30,12 +46,11 @@ $('#9am').value = moment('9:00 am', 'hh:mm a').format('h');
 // $('#5pm') = fivePM;
 
 // Color Coordinator
-function colorCoordinator(time) {
+function colorCoordinator($h) {
 
-        if (time < currentHour) {
-            $('this').addClass('past');
-            $('this').children().addClass('past');
-    }
+        if ($h < currentHour) 
+        $('this').addClass('.past');
+        return $h;
 
         // else if (timeID == currentHour)
         // {$('.time-block').replaceWith('.present');}
@@ -47,7 +62,9 @@ function colorCoordinator(time) {
 
 // Color Coordination
 
-    colorCoordinator($('#9am').value);
+    colorCoordinator($9am);
+
+
     // colorCoordinator(tenAM);
     // colorCoordinator(elevenAM);
     // colorCoordinator(twelvePM);
@@ -56,6 +73,12 @@ function colorCoordinator(time) {
     // colorCoordinator(threePM);
     // colorCoordinator(fourPM);
     // colorCoordinator(fivePM);
+
+    // $(".saveBtn").click(function() {
+    //     var toDo = ;
+    //     var hour = ;
+    //     localStorage.setItem()
+    // })
 
 
 
