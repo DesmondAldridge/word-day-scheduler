@@ -2,13 +2,18 @@
 $('#currentDay').append(moment().format('MMM Do YYYY'));
 
 // The current hour
-var currentHour = moment().format('h');
+var currentHour = moment().hour();
 
 // So the time blocks recognize themselves as specific hours of the day... utilizing moment.js as much as possible
 var nineAM = moment('9:00 am', 'hh:mm a').format('h');
-$('#9am').data('hour', nineAM);
-var tenAM = moment('10:00 am', 'hh:mm a').format('h');
-$('#10am').data('hour', tenAM);
+$('#9am').data(nineAM);
+
+
+
+//Workshopping different methods, syntax, blah blah...
+var tenAM = $('#10am').data('h' , moment().hour(10));
+
+
 var elevenAM = moment('11:00 am', 'hh:mm a').format('h');
 $('#11am').data('hour', elevenAM);
 var twelvePM = moment('12:00 pm', 'hh:mm a').format('h');
@@ -36,45 +41,37 @@ var $3pm = $('#3pm');
 var $4pm = $('#4pm');
 var $5pm = $('#5pm');
 
+console.log($9am);
+console.log($10am);
+console.log($10am.data);
+console.log(currentHour);
+console.log($10am.data == currentHour);
 
 
-console.log($9am.data == currentHour);
 
 
 
 
-
-// Work hour IDs... to identify which hours each time block represents
-// $9am.value = moment('9:00 am', 'hh:mm a').format('h');
-// $('#9am').value = nineAM;
-// $('#10am') = tenAM;
-// $('#11am') = elevenAM;
-// $('#12pm') = twelvePM;
-// $('#1pm') = onePM;
-// $('#2pm') = twoPM;
-// $('#3pm') = threePM;
-// $('#4pm') = fourPM;
-// $('#5pm') = fivePM;
 
 // Color Coordinator
 function colorCoordinator($h) {
 
-        if ($h < currentHour) 
+    if ($h < currentHour)
         $h.addClass('.past');
-        return $h;
-      
+    return $h;
 
-        // else if (timeID == currentHour)
-        // {$('.time-block').replaceWith('.present');}
 
-        // else if (timeID > currentHour)
-        // {$('.time-block').replaceWith('.future')};
+    // else if (timeID == currentHour)
+    // {$('.time-block').replaceWith('.present');}
 
-    }
+    // else if (timeID > currentHour)
+    // {$('.time-block').replaceWith('.future')};
+
+}
 
 // Color Coordination
 
-    colorCoordinator($9am);
+colorCoordinator($9am);
 
 
     // colorCoordinator(tenAM);
