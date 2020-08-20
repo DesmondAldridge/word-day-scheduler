@@ -1,7 +1,12 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  background-color: cornflowerblue;
+  background-image: url('./dayPlanner.jpg');
+  font-family: cursive;
   font-size: 16px;
   line-height: 1;
+  font-weight: 800;
+  color: rgb(10, 0, 143);
+  align-content: center;
 }
 
 textarea{
@@ -9,16 +14,15 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border-left: 1px solid transparent;
   padding: 10px;
 }
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid transparent;
 }
 
 .description{
@@ -33,36 +37,47 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid transparent;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  /* background-color: #ffffff;
+  color: rgb(10, 0, 143); */
 }
 
 .past {
-  background-color: red;
-  color: white;
+  background: #FF6F61;
+
+    background: -webkit-linear-gradient(0deg, #FF6F61 -0.04%, #FDA198 68.22%);
+    background: linear-gradient(0deg, #FF6F61 -0.04%, #FDA198 68.22%);
+
+  color: black;
 }
 
 .present {
-  background-color: blue;
-  color: white;
+  background: #FFA5FF;
+
+    background: -webkit-linear-gradient(45deg, #B9E28C, #FFA5FF);
+    background: linear-gradient(45deg, #B9E28C, #FFA5FF);
+
+  color: black;
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background: #11A49B;
+
+    background: -webkit-linear-gradient(45deg, #11A49B, #90FC8E);
+    background: linear-gradient(45deg, #11A49B, #90FC8E);
+
+  color: black;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid transparent;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
+  /* background-color: blue; */
+  color: black;
 }
 
 .saveBtn i:hover {

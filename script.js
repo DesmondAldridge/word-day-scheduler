@@ -1,3 +1,10 @@
+$(document).ready(function() {
+  
+  colorCoordination();
+
+
+})
+
 // DISPLAYING CURRENT DATE
 $('#currentDay').append(moment().format('MMM Do YYYY'));
 
@@ -37,7 +44,7 @@ $('#5pm').data('hour', fivePM);
 
 
 // COLOR COORDINATION
-// Thank the coding gods we learned the each function earlier this week...
+// Thank the coding gods we learned the 'each' function earlier this week...
 function colorCoordination() {
 
     timeBlocks.each(function() {
@@ -60,7 +67,9 @@ function colorCoordination() {
     });
 }
 
-$(document).ready(function(){colorCoordination();})
+
+
+
 
 
 
