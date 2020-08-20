@@ -1,9 +1,34 @@
 $(document).ready(function() {
   
   colorCoordination();
+  // localize();
+
+  // RETRIEVING
+  var theWhens = $('textarea').attr('id');
+  var theWhats = localStorage.getItem(theWhens);
+
+  $('textarea').val(theWhats);
 
 
 })
+
+// SAVING
+$(".saveBtn").click(function () {
+  
+  var todo = $(this).siblings('textarea').val();
+  var when = $(this).siblings('textarea').attr('id');
+  localStorage.setItem(when, todo);
+
+});
+
+
+
+
+
+
+
+
+
 
 // DISPLAYING CURRENT DATE
 $('#currentDay').append(moment().format('MMM Do YYYY'));
@@ -47,25 +72,29 @@ $('#5pm').data('hour', fivePM);
 // Thank the coding gods we learned the 'each' function earlier this week...
 function colorCoordination() {
 
-    timeBlocks.each(function() {
+  timeBlocks.each(function() {
 
-      var currentBlock = $(this);
-      var currentBlockMoment = currentBlock.data('hour');
+    var currentBlock = $(this);
+    var currentBlockMoment = currentBlock.data('hour');
 
-      if (currentBlockMoment < currentHour) {
-        currentBlock.children().addClass('past').removeClass('present future');
-      }
+    if (currentBlockMoment < currentHour) {
+      currentBlock.children().addClass('past').removeClass('present future');
+    }
 
-      if (currentBlockMoment > currentHour) {
-        currentBlock.children().addClass('future').removeClass('past present');
-      }
+    if (currentBlockMoment > currentHour) {
+      currentBlock.children().addClass('future').removeClass('past present');
+    }
 
-      if (currentBlockMoment === currentHour) {
-        currentBlock.children().addClass('present').removeClass('past future');
-      }
+    if (currentBlockMoment === currentHour) {
+      currentBlock.children().addClass('present').removeClass('past future');
+    }
 
-    });
+  });
+
 }
+
+
+
 
 
 
