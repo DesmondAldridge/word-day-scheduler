@@ -1,13 +1,17 @@
 body {
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   background-image: url('./dayPlanner.jpg');
-  font-family: cursive;
-  font-size: 16px;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: x-large;
   line-height: 1;
-  font-weight: 800;
-  color: rgb(10, 0, 143);
+  font-weight: bolder;
   align-content: center;
 }
+
+header {
+  padding-left: 3%;
+}
+
 
 textarea{
   background: transparent;
@@ -18,12 +22,12 @@ textarea{
   padding: 10px;
 }
 
-.jumbotron {
+/* .jumbotron {
   text-align: center;
   background-color: transparent;
   border-radius: 0;
   border-bottom: 10px solid transparent;
-}
+} */
 
 .description{
   white-space: pre-wrap;
@@ -52,15 +56,17 @@ textarea{
     background: linear-gradient(0deg, #FF6F61 -0.04%, #FDA198 68.22%);
 
   color: black;
+  opacity: 50%;
 }
 
 .present {
-  background: #FFA5FF;
+  background: #d3cce3;
 
-    background: -webkit-linear-gradient(45deg, #B9E28C, #FFA5FF);
-    background: linear-gradient(45deg, #B9E28C, #FFA5FF);
+    background: -webkit-linear-gradient(45deg, #e9e4f0, #d3cce3);
+    background: linear-gradient(45deg, #e9e4f0, #d3cce3);
 
   color: black;
+  opacity: 95%;
 }
 
 .future {
@@ -70,6 +76,7 @@ textarea{
     background: linear-gradient(45deg, #11A49B, #90FC8E);
 
   color: black;
+  opacity: 85%;
 }
 
 .saveBtn {
