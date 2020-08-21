@@ -5,15 +5,28 @@ $('#currentDay').append(moment().format('MMM Do YYYY'));
   
   colorCoordination();
 
-
   // RETRIEVING
-  var makeSchedule = $('textarea').attr('id');
-  // var theWhats = $('textarea').val();
-  
-  var theSchedule = localStorage.getItem(makeSchedule);
+  var allEntries = $('textarea');
 
-  console.log(theSchedule);
+  allEntries.each(function() {
 
+
+    function fetchSchedule() {
+
+      var fetchedSchedule = $('textarea').attr('id');
+      var theSchedule = localStorage.getItem(fetchedSchedule);
+
+      allEntries.val(theSchedule);
+
+    }
+
+
+    
+    
+  })
+
+ 
+  fetchSchedule();
 
 })
 
