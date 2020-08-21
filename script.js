@@ -6,29 +6,22 @@ $('#currentDay').append(moment().format('MMM Do YYYY'));
   colorCoordination();
 
   // RETRIEVING
-  var allEntries = $('textarea');
 
-  allEntries.each(function() {
+  var entry = $('textarea');
 
+  function fetchSchedule() {
 
-    function fetchSchedule() {
+    var fetchedSchedule = $('textarea').attr('id');
+    var theSchedule = localStorage.getItem(fetchedSchedule);
 
-      var fetchedSchedule = $('textarea').attr('id');
-      var theSchedule = localStorage.getItem(fetchedSchedule);
+    entry.val(theSchedule);
 
-      allEntries.val(theSchedule);
-
-    }
+  }
 
 
-    
-    
-  })
-
- 
   fetchSchedule();
 
-})
+
 
 // SAVING
 $(".saveBtn").click(function () {
@@ -38,6 +31,14 @@ $(".saveBtn").click(function () {
   localStorage.setItem(when, todo);
 
 });
+
+
+
+
+
+})
+
+
 
 
 // THE CURRENT HOUR
