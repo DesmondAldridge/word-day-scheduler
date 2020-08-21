@@ -1,13 +1,18 @@
 $(document).ready(function() {
+
+  // DISPLAYING CURRENT DATE
+$('#currentDay').append(moment().format('MMM Do YYYY'));
   
   colorCoordination();
-  // localize();
+
 
   // RETRIEVING
-  var theWhens = $('textarea').attr('id');
-  var theWhats = localStorage.getItem(theWhens);
+  var makeSchedule = $('textarea').attr('id');
+  // var theWhats = $('textarea').val();
+  
+  var theSchedule = localStorage.getItem(makeSchedule);
 
-  $('textarea').val(theWhats);
+  console.log(theSchedule);
 
 
 })
@@ -21,17 +26,6 @@ $(".saveBtn").click(function () {
 
 });
 
-
-
-
-
-
-
-
-
-
-// DISPLAYING CURRENT DATE
-$('#currentDay').append(moment().format('MMM Do YYYY'));
 
 // THE CURRENT HOUR
 var currentHour = moment().format('HH');
