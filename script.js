@@ -12,16 +12,19 @@ $('#currentDay').append(moment().format('MMM Do YYYY'));
 
   // RETRIEVING
 
-
   function fetchSchedule() {
 
-    var fetchedSchedule = $('textarea').attr('id');
-    var theSchedule = localStorage.getItem(fetchedSchedule);
+    $('textarea').each(function() {
 
-    $('textarea').val(theSchedule);
+      var currentEntry = $(this);
+      var fetchedSchedule = currentEntry.attr('id');
+      var theSchedule = localStorage.getItem(fetchedSchedule);
+
+      currentEntry.val(theSchedule);
+
+    })
 
   }
-
 
   // SAVING
   $(".saveBtn").click(function () {
