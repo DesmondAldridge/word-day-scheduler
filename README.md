@@ -23,8 +23,6 @@
 
 #### The current hour is always highlighted and distinct from both upcoming and previous entries.
 
-<br>
-
 #### Happy scheduling!
 
 <br>
