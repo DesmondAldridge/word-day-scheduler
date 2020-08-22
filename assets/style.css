@@ -1,6 +1,6 @@
 body {
   /* background-color: cornflowerblue; */
-  background-image: url('./dayPlanner.jpg');
+  background-image: url('../assets/dayPlanner.jpg');
   font-family: 'Bangers', cursive;
   font-size: x-large;
   line-height: 1;

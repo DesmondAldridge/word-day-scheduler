@@ -1,46 +1,15 @@
 $(document).ready(function() {
 
-  // DISPLAYING CURRENT DATE
-$('#currentDay').append(moment().format('MMM Do YYYY'));
-  
   colorCoordination();
   fetchSchedule();
-
   
 });
 
-
-  // RETRIEVING
-
-  function fetchSchedule() {
-
-    $('textarea').each(function() {
-
-      var currentEntry = $(this);
-      var fetchedSchedule = currentEntry.attr('id');
-      var theSchedule = localStorage.getItem(fetchedSchedule);
-
-      currentEntry.val(theSchedule);
-
-    })
-
-  }
-
-  // SAVING
-  $(".saveBtn").click(function () {
-    
-    var todo = $(this).siblings('textarea').val();
-    var when = $(this).siblings('textarea').attr('id');
-    localStorage.setItem(when, todo);
-
-  });
+//GLOBAL VARIABLES & MOMENT OBJECTS
 
 
-
-
-
-
-
+// DISPLAYING CURRENT DATE
+$('#currentDay').append(moment().format('MMM Do YYYY'));
 
 // THE CURRENT HOUR
 var currentHour = moment().format('HH');
@@ -102,7 +71,29 @@ function colorCoordination() {
 
 }
 
+// RETRIEVING SCHEDULE
+function fetchSchedule() {
 
+  $('textarea').each(function() {
+
+    var currentEntry = $(this);
+    var fetchedSchedule = currentEntry.attr('id');
+    var theSchedule = localStorage.getItem(fetchedSchedule);
+
+    currentEntry.val(theSchedule);
+
+  })
+
+}
+
+// SAVING
+$(".saveBtn").click(function () {
+  
+  var todo = $(this).siblings('textarea').val();
+  var when = $(this).siblings('textarea').attr('id');
+  localStorage.setItem(when, todo);
+
+});
 
 
 
