@@ -27,8 +27,7 @@
 #### Happy scheduling!
 
 <br>
-<br>
-<br> 
+
 
 ## <u>REFLECTIONS</u>
 
