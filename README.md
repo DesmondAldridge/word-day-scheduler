@@ -1,9 +1,10 @@
 <body style="background-color: white;">
 
-# **Work Day Planner** <img src="assets/image-status-passing.png">
+# **Work Day Planner** <img src="assets/image-status-passing.png" height="20">
 
-![Day Planner Preview](assets\dayPlannerByDes.gif)
 <center>
+<img src="assets/dayPlannerByDes.gif">
+
 
 ## Check out the deployed app <a href="https://desmondaldridge.github.io/work-day-scheduler/">here!</a>
 
@@ -15,8 +16,8 @@
 
 ##### **BUILT WITH:**
 <ul>
-<li><a href="momentjs.com">MOMENT.JS</a>``<img src="./assets/momentJS.png" width="20" height="20"></li>
-<li><a href="getbootstrap.com">BOOTSTRAP</a>``<img src="./assets/bootstrap.png" width="20" height="20"></li>
+<li><a href="momentjs.com">MOMENT.JS</a> <img src="./assets/momentJS.png" width="20" height="20"></li>
+<li><a href="getbootstrap.com">BOOTSTRAP</a> <img src="./assets/bootstrap.png" width="20" height="20"></li>
 </ul>
 
 #### This daily planner is designed for a standard work day, and allows you to write and save entries for any or all of the 8 time slots available (9am - 5pm).
