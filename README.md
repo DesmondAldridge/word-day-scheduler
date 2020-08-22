@@ -10,8 +10,6 @@
 
 </center>
 
-<br>
-
 ## <u>FEATURES</u>
 
 ##### **BUILT WITH:**
