@@ -4,39 +4,37 @@ $(document).ready(function() {
 $('#currentDay').append(moment().format('MMM Do YYYY'));
   
   colorCoordination();
+  fetchSchedule();
+
+  
+});
+
 
   // RETRIEVING
 
-  var entry = $('textarea');
 
   function fetchSchedule() {
 
     var fetchedSchedule = $('textarea').attr('id');
     var theSchedule = localStorage.getItem(fetchedSchedule);
 
-    entry.val(theSchedule);
+    $('textarea').val(theSchedule);
 
   }
 
 
-  fetchSchedule();
+  // SAVING
+  $(".saveBtn").click(function () {
+    
+    var todo = $(this).siblings('textarea').val();
+    var when = $(this).siblings('textarea').attr('id');
+    localStorage.setItem(when, todo);
 
-
-
-// SAVING
-$(".saveBtn").click(function () {
-  
-  var todo = $(this).siblings('textarea').val();
-  var when = $(this).siblings('textarea').attr('id');
-  localStorage.setItem(when, todo);
-
-});
+  });
 
 
 
 
-
-})
 
 
 
