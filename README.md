@@ -1,9 +1,9 @@
 <body style="background-color: white;">
 
-# **Work Day Planner** <img src="assets/image-status-passing.png" height="20">
+# **Work Day Planner** <img src="./assets/image-status-passing.png" height="20">
 
 <center>
-<img src="assets/dayPlannerByDes.gif">
+<img src="./assets/dayPlannerByDes.gif">
 
 
 ## Check out the deployed app <a href="https://desmondaldridge.github.io/work-day-scheduler/">here!</a>
@@ -23,6 +23,12 @@
 #### The current hour is always highlighted and distinct from both upcoming and previous entries.
 
 #### Happy scheduling!
+
+## <u>BEHIND THE SCENES</u>
+
+#### This assignment demonstrates setting and getting items from local storage, in order to both display that data as well as have it persist.
+
+<img src="./assets/home-storage.png">
 
 <br>
 

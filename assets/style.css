@@ -24,13 +24,6 @@ textarea{
   padding: 10px;
 }
 
-/* .jumbotron {
-  text-align: center;
-  background-color: transparent;
-  border-radius: 0;
-  border-bottom: 10px solid transparent;
-} */
-
 .description{
   white-space: pre-wrap;
 }
@@ -44,11 +37,6 @@ textarea{
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid transparent;
-}
-
-.hour {
-  /* background-color: #ffffff;
-  color: rgb(10, 0, 143); */
 }
 
 .past {
